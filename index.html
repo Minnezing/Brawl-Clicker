@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brawl Clicker</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/ranks.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <script src="./js/brawlers.js" defer></script>
+    <script src="./js/data.js" defer></script>
+    <script src="./js/brawlerCard.js" defer></script>
+    <script src="./js/index.js" defer></script>
+    <script src="./js/fx.js" defer></script>
+    <script src="./js/effect.js" defer></script>
+    <script src="./js/render.js" defer></script>
+</head>
+<body>
+    <main class="main">
+        <section class="clicker">
+            <h1 class="clicker__title">Brawl Clicker</h1>
+            <div class="clicker__stats">
+                <div class="clicker__stat">
+                    <img src="./assets/icons/gem.png" alt="Gem" class="stat__icon">
+                    <p id="gems" class="stat__count">1000</p>
+                </div>
+                <div class="clicker__stat">
+                    <img src="./assets/icons/exp.png" alt="Exp" class="stat__icon">
+                    <p id="exp" class="stat__count">1000</p>
+                </div>
+            </div>
+            <img src="./assets/icons/clicker.png" draggable="false" alt="CLICK" id="click" class="main_clicker">
+            <div class="effects" id="effects"></div>
+        </section>
+        <section class="brawlers">
+            <h1 class="brawlers__title">
+                <span class="brawlers__title_blue">
+                    <span class="brawlers__count number" id="brawlers_count">1</span>
+                    из
+                    <span class="brawlers__all_count number" id="brawlers_all_count">16</span>
+                </span>
+                бойцов
+            </h1>
+            <div class="brawlers__list" id="brawlers">
+            </div>
+        </section>
+        <div class="header_line"></div>
+    </main>
+</body>
+</html>
