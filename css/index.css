@@ -153,16 +153,16 @@ h1 {
     position: relative;
     z-index: 2;
 
-    width: 80%;
-
     display: grid;
 
     grid-template-columns: repeat(3, 280px);
-    grid-auto-rows: auto;
+    grid-auto-rows: 250px;
     
     gap: 50px;
 
     justify-content: center;
+
+    overflow-y: scroll;
 }
 
 .brawler {
@@ -255,6 +255,10 @@ h1 {
     height: 180px;
     opacity: 1;
     transition: all var(--brawler-card-open-time);
+
+    object-fit: cover;
+    object-position: left;
+    max-width: 280px;
 }
 
 .brawler__name {
@@ -386,7 +390,7 @@ h1 {
     color: #000;
     text-shadow: none;
     border: none;
-    width: 300px;
+    width: 250px;
 
     font-size: 16px;
 
@@ -659,4 +663,29 @@ h1 {
     bottom: -10px;
     left: 23px;
     clip-path: polygon(0 0, 50% 100%, 50% 100%, 100% 0);
+}
+
+@keyframes bubbleAppearing {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    40% {
+        width: 75px;
+    }
+    55% {
+        width: 70px;
+    }
+    70% {
+        width: 110px;
+    }
+    99% {
+        width: 150px;
+    }
+    100% {
+        width: 180px;
+    }
 }
