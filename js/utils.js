@@ -14,9 +14,16 @@ function resetBrawlerGadget(brawlerId) {
     return "Done";
 }
 
-function setBrawlerEarned(brawlerId, earned) {
+function setBrawlerEarnedGems(brawlerId, earned) {
     if (!brawlersData.some(brw => brw.id === brawlerId)) return console.error("Нет бойца с id = "+ brawlerId);
     setBrawlerData(brawlerId, "earned", earned);
+    return "Done";
+}
+
+function setBrawlerEarnedInSeconds(brawlerId, earnedInSeconds) {
+    let brawlerData = brawlersData.find(brw => brw.id === brawlerId);
+    if (!brawlerData) return console.error("Нет бойца с id = "+ brawlerId);
+    setBrawlerData(brawlerId, "earned", earnedInSeconds * brawlerData.levels.at(-1).gemsInSecond);
     return "Done";
 }
 
